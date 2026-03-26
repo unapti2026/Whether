@@ -1,0 +1,27 @@
+data:
+  input_dir: "data/input"
+  thresholds_file: "data/thresholds/Umbrales_Olas de Frío y Calor.xlsx"
+
+output:
+  base_dir: "output"
+  enable_plots: true
+  enable_reports: true
+
+prediction:
+  default_horizon_weeks: 4
+  default_horizon_days: null
+
+processing:
+  max_stations: null
+  enable_validation: true
+  enable_logging: true
+
+models:
+  eemd_ensembles: 20
+  eemd_noise_factor: 0.1
+  eemd_max_imfs: 10
+  svr_kernel: "rbf"
+  svr_c: 1.0
+  sarimax_order: [1, 1, 0]
+  sarimax_seasonal_order: [1, 0, 0, 365]
+
